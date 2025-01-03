@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { oneDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
 
@@ -20,9 +20,9 @@ export default function Home() {
   `;
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen p-4 bg-gray-100">
+    <div className="flex flex-col items-center justify-center min-h-screen p-4 bg-gray-100 z-10">
       <h1 className="text-2xl font-bold mb-6 text-black">Load Spinner</h1>
-      <div className="grid grid-cols-2 place-items-center items-center gap-10">
+      <div className="grid grid-cols-2 place-items-center items-center gap-10 z-10 ">
         <motion.div
           animate={{ rotate: 360 }}
           transition={{ repeat: Infinity, duration: 1, ease: "linear" }}
