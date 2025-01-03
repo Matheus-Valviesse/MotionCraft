@@ -20,14 +20,17 @@ export default function Home() {
   `;
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen p-4 bg-gray-100 z-10">
+    <div className="flex flex-col items-center justify-center min-h-screen p-4 bg-gray-100 z-0">
       <h1 className="text-2xl font-bold mb-6 text-black">Load Spinner</h1>
-      <div className="grid grid-cols-2 place-items-center items-center gap-10 z-10 ">
-        <motion.div
-          animate={{ rotate: 360 }}
-          transition={{ repeat: Infinity, duration: 1, ease: "linear" }}
-          className=" border-8 rounded-full border-[#bdbdbd] border-t-black w-20 p-10"
-        />
+
+      <div className=" flex flex-row w-[100vw] items-center justify-center gap-20">
+        <div className="z-[0]">
+          <motion.div
+            animate={{ rotate: 360 }}
+            transition={{ repeat: Infinity, duration: 1, ease: "linear" }}
+            className=" border-8 rounded-full border-[#bdbdbd] border-t-black w-20 p-10 z-3"
+          />
+        </div>
 
         <div className="mt-4 w-full max-w-[600px] p-4 bg-white rounded shadow">
           <SyntaxHighlighter language="jsx" style={oneDark}>
