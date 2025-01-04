@@ -29,7 +29,7 @@ const Lateralbar = () => {
 
   return (
     <motion.div
-      className="absolute w-[50px] h-full bg-[#ffffff] shadow-xl rounded-r-md z-[100]"
+      className="absolute w-[50px] h-full bg-[#131212] shadow-lg shadow-[#6fda6160] rounded-r-md z-[100]"
       variants={barControll}
       animate={isOpen ? "open" : "close"} // Alterna a largura
       transition={{ duration: 0.4, ease: "easeOut" }}
@@ -43,7 +43,7 @@ const Lateralbar = () => {
           className="cursor-pointer right-0 mr-1 mt-1 absolute p-4 rounded-full"
         >
           <MdOutlineArrowForwardIos
-            className={`text-black text-[20px] ${
+            className={`text-[#35b31b] text-[22px] ${
               isOpen ? "rotate-180" : "" // Gira o ícone quando aberto
             } transition-transform`}
           />
@@ -52,7 +52,7 @@ const Lateralbar = () => {
           <motion.div
             variants={inputControll}
             animate={itensSurge ? "open" : "close"}
-            transition={{ duration: 0.3 }}
+            transition={{ duration: 0.2 }}
             initial={{ opacity: 0 }}
             onAnimationComplete={(e) => {
               if (e == "close") setIsOpen(false);
@@ -61,10 +61,10 @@ const Lateralbar = () => {
           >
             <input
               type="text"
-              className="border-[1px] border-[#696969] bg-[#1d1d1d08] rounded-l-lg border-r-none outline-none focus:border-r-none w-full h-full text-black px-2 "
+              className="border-[1px] border-[#fcfcfc] bg-[#fff] rounded-l-lg border-r-none outline-none focus:border-r-none w-full h-full text-black px-2 "
             />
-            <div className="bg-[#1d1d1d] rounded-l-none rounded-r-lg h-full p-2">
-              <FaSearch />
+            <div className="bg-[#c9c9c9] rounded-l-none rounded-r-lg h-full p-2">
+              <FaSearch className="" />
             </div>
           </motion.div>
         </div>
