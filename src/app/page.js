@@ -1,7 +1,11 @@
 import React from "react";
 
 const page = () => {
-  return <div className="h-full">page</div>;
+  return (
+    <div className="flex">
+      <h1>Home</h1>
+    </div>
+  );
 };
 
 export default page;
